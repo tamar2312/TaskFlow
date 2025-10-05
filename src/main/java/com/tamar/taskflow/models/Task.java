@@ -18,6 +18,8 @@ public class Task {
     @Column
     private String status;
 
+    @ManyToOne
+    private User owner;
 
     public String getTitle() {
         return title;
@@ -49,5 +51,13 @@ public class Task {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public User getUser() {
+        return owner;
+    }
+
+    public void setUser(User owner) {
+        this.owner = owner;
     }
 }
