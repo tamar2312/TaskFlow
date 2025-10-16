@@ -26,7 +26,7 @@ public class HomeController {
         return taskRepository.findAll();
     }
 
-    @GetMapping("/users/{id}")
+    @GetMapping("/user/{id}")
     public List<Task> findUserTasks(@PathVariable Long id){
         return  taskRepository.findByOwnerId(id);
     }
